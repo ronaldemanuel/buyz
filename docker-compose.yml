@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres
+    container_name: buyz_db
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USERNAME}
+    ports:
+      - 5432:${DB_PORT}
